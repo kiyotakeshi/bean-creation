@@ -6,8 +6,8 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 @Component
-public class SpringBean2 {
-    public SpringBean2() {
+public class Bean2 {
+    public Bean2() {
         System.out.println(getClass().getSimpleName() + "::constructor");
     }
 

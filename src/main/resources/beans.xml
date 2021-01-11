@@ -4,13 +4,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="springBean1" class="com.kiyotakeshi.bean.creation.beans.SpringBean1">
-        <property name="springBean2" ref="springBean2"/>
-        <property name="springBean3" ref="springBean3"/>
+    <bean id="bean1" class="com.kiyotakeshi.bean.creation.beans.Bean1">
+        <property name="bean2" ref="bean2"/>
+        <property name="bean3" ref="bean3"/>
     </bean>
 
-    <bean id="springBean2" class="com.kiyotakeshi.bean.creation.beans.SpringBean2"/>
+    <bean id="bean2" class="com.kiyotakeshi.bean.creation.beans.Bean2"/>
 
-    <bean id="springBean3" class="com.kiyotakeshi.bean.creation.beans.SpringBean3"/>
+    <bean id="bean3" class="com.kiyotakeshi.bean.creation.beans.Bean3"/>
 
 </beans>

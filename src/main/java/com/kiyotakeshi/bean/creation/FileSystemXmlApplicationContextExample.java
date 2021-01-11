@@ -1,16 +1,16 @@
 package com.kiyotakeshi.bean.creation;
 
-import com.kiyotakeshi.bean.creation.beans.SpringBean1;
+import com.kiyotakeshi.bean.creation.beans.Bean1;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 public class FileSystemXmlApplicationContextExample {
     public static void main(String[] args) {
         String beansXmlLocationOnFilesystem = FileSystemXmlApplicationContextExample.class.getResource("/beans.xml").toExternalForm();
 
-        FileSystemXmlApplicationContext context = new FileSystemXmlApplicationContext(beansXmlLocationOnFilesystem);
+        var context = new FileSystemXmlApplicationContext(beansXmlLocationOnFilesystem);
 
-        SpringBean1 springBean1 = context.getBean(SpringBean1.class);
+        var bean1 = context.getBean(Bean1.class);
 
-        springBean1.sayHello();
+        bean1.sayHello();
     }
 }

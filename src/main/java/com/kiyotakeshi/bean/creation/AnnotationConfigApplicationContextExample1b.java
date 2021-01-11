@@ -1,17 +1,14 @@
 package com.kiyotakeshi.bean.creation;
 
-import com.kiyotakeshi.bean.creation.beans.SpringBean1;
-import com.kiyotakeshi.bean.creation.configuration.ConfigurationStatic;
+import com.kiyotakeshi.bean.creation.beans.Bean1;
+import com.kiyotakeshi.bean.creation.configuration.AppConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class AnnotationConfigApplicationContextExample1b {
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
-                ConfigurationStatic.class
-        );
+        var context = new AnnotationConfigApplicationContext(AppConfig.class);
+        var bean1 = context.getBean(Bean1.class);
 
-        SpringBean1 bean = context.getBean(SpringBean1.class);
-
-        bean.sayHello();
+        bean1.sayHello();
     }
 }

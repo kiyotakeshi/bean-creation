@@ -7,11 +7,11 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 @Component
-public class SpringBean1 {
-    private SpringBean2 springBean2;
-    private SpringBean3 springBean3;
+public class Bean1 {
+    private Bean2 bean2;
+    private Bean3 bean3;
 
-    public SpringBean1() {
+    public Bean1() {
         System.out.println(getClass().getSimpleName() + "::constructor");
     }
 
@@ -20,15 +20,15 @@ public class SpringBean1 {
     }
 
     @Autowired
-    public void setSpringBean2(SpringBean2 springBean2) {
+    public void setBean2(Bean2 bean2) {
         System.out.println(getClass().getSimpleName() + "::setSpringBean2");
-        this.springBean2 = springBean2;
+        this.bean2 = bean2;
     }
 
     @Autowired
-    public void setSpringBean3(SpringBean3 springBean3) {
+    public void setBean3(Bean3 bean3) {
         System.out.println(getClass().getSimpleName() + "::setSpringBean3");
-        this.springBean3 = springBean3;
+        this.bean3 = bean3;
     }
 
     @PostConstruct
