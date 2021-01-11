@@ -15,6 +15,7 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<spring.boot.mainClass>com.kiyotakeshi.bean.creation.AnnotationConfigApplicationContextExample1a</spring.boot.mainClass>
 	</properties>
 
 	<dependencies>
@@ -35,6 +36,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>${spring.boot.mainClass}</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
